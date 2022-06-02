@@ -34,7 +34,7 @@ public class GheeSpawn : MonoBehaviour
     //Bools.
 
     //Creats _timeAtthree bool.
-    [SerializeField] bool pickedUp;
+   public bool pickedUp;
 
 //I made CanDeposite.
     [SerializeField] bool CanDeposite;
@@ -49,68 +49,73 @@ public class GheeSpawn : MonoBehaviour
     private void Start()
     {
         pickedUp = true;
+        Spawn();
     }
 
 
     //I added a function called OnPressed that calls, on spacebar down to test.
-    public void OnPressed()
+    /*public void OnPressed()
     {
 
         //Started spawn function.
         Spawn();
-    }
+    }*/
 
    //For spawning once one is pickedup.
 
     //WaitTime IEnumerator used for a delay in spawning.
     //I changed "WaitTime" to "Spawn" & changed it to a void.
 
-    /*void Spawn()
+    public void Spawn()
     {
         //If PickedUp is true.
         if (pickedUp == true)
         {
             //I changed the values.
-            zvalue = Random.Range(232, 26);
-            xvalue = Random.Range(-97, -107);
-            yvalue = Random.Range(1, 1);
+            zvalue = Random.Range(221, 37);
+            xvalue = Random.Range(-50, 18);
+            yvalue = Random.Range(-9, -9);
             Instantiate(_ghee, new Vector3(xvalue, yvalue, zvalue), _player.transform.rotation);
+
             pickedUp = false;
             
         }
 
        
         
-    }*/
-    
+    }
+
 
     //Private void spawn. Spawns enemies. 
     //I made it spoawn ghee.
-    void Spawn()
-    {
-        //I added this while loop.
-        //While _enemiesInScene != _numberofGheeHeld the player can't deposite.
+    /* void Spawn()
+     {
+         //I added this while loop.
+         //While _enemiesInScene != _numberofGheeHeld the player can't deposite.
 
-        while (_GheeInScene != _numberofGheeHeld)
-        {
-            CanDeposite = false;
-        }
+         while (_GheeInScene != _numberofGheeHeld)
+         {
+             CanDeposite = false;
+         }
 
-        //Checks to see if eneimesInScene doesn't equal AmountToSpawn. 
+         //Checks to see if eneimesInScene doesn't equal AmountToSpawn. 
 
-        if (deposited == true && _GheeInScene !=_numberofSpawns)
-        {
-            //While _numberofSpawns != _enemiesInScene spawn enemies randomly.
-            while (_numberofSpawns != _GheeInScene)
-            {
-            zvalue = Random.Range(-200, 200);
-            xvalue = Random.Range(-200, 200);
-            yvalue = Random.Range(1, 1);
-            Instantiate(_ghee, new Vector3(xvalue, yvalue, zvalue), _player.transform.rotation);
+         if (deposited == true && _GheeInScene !=_numberofSpawns)
+         {
+             //While _numberofSpawns != _enemiesInScene spawn enemies randomly.
+             while (_numberofSpawns != _GheeInScene)
+             {
+                zvalue = Random.Range(221, 37);
+                xvalue = Random.Range(-50, 18);
+                yvalue = Random.Range(1, 1);
+             Instantiate(_ghee, new Vector3(xvalue, yvalue, zvalue), _player.transform.rotation);
 
-            //_numberofspawns + 1.
-            _numberofSpawns++;
-            }
-        }
-    }
+             //_numberofspawns + 1.
+             _numberofSpawns++;
+             }
+         }
+     } */
+
+  
+
 }
