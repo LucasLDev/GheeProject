@@ -13,7 +13,9 @@ public class Shoot : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        //When the player presses left click on mouse
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        //
         {
             GameObject GO = Instantiate(bulletPrefab, bulletSpawnpoint.position, Quaternion.identity) as GameObject;
             GO.GetComponent<Rigidbody>().AddForce(GheeGun.transform.forward * bulletSpeed, ForceMode.Impulse);
