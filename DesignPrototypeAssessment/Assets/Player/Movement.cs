@@ -17,10 +17,7 @@ public class Movement : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Space))
-        {
-            Jump = true;
-        }
+      
         isGrounded = controller.isGrounded;
         if (isGrounded)
         {
