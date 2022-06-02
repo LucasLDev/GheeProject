@@ -16133,7 +16133,7 @@ Transform:
   - {fileID: 1843720966}
   - {fileID: 2038790592}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 229.9, z: 0}
 --- !u!43 &754464809
 Mesh:
@@ -16554,7 +16554,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &788285104
 GameObject:
@@ -29908,7 +29908,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1241958139
 GameObject:
@@ -32213,6 +32213,7 @@ GameObject:
   - component: {fileID: 1331070248}
   - component: {fileID: 1331070247}
   - component: {fileID: 1331070246}
+  - component: {fileID: 1331070249}
   m_Layer: 7
   m_Name: GheeGun
   m_TagString: Untagged
@@ -32296,6 +32297,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1331070244}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1331070249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331070244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebd2ebccb77aa1948a80564d587b122f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  raycastMarker: {fileID: 0}
 --- !u!43 &1331079497
 Mesh:
   m_ObjectHideFlags: 0
@@ -37008,7 +37022,7 @@ GameObject:
   - component: {fileID: 1589455015}
   m_Layer: 0
   m_Name: Enemy01
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39574,7 +39588,7 @@ RectTransform:
   - {fileID: 637966013}
   - {fileID: 496752994}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -42137,7 +42151,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1855624960
 GameObject:
@@ -47409,7 +47423,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2110503100
 GameObject:
