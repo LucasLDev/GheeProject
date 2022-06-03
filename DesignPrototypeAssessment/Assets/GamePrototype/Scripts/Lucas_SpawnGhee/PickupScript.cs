@@ -6,6 +6,8 @@ public class PickupScript : MonoBehaviour
 {
 
     [SerializeField] GheeSpawn _gheeSpawn;
+    public Inventory inventory;
+    
 
     private void Start()
     {
@@ -19,7 +21,9 @@ public class PickupScript : MonoBehaviour
 
             _gheeSpawn.pickedUp = true;
             _gheeSpawn.Spawn();
+            _gheeSpawn.claim = true;
             Destroy(gameObject);
+            //inventory.amountOfGhee = 
 
            
         }

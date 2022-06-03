@@ -15,9 +15,16 @@ public class Movement : MonoBehaviour
     [SerializeField] LayerMask groundMask;
     bool isGrounded;
 
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
     private void Update()
     {
       
+
         isGrounded = controller.isGrounded;
         if (isGrounded)
         {

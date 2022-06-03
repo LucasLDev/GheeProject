@@ -33,6 +33,8 @@ public class GheeSpawn : MonoBehaviour
 
     //Bools.
 
+    public bool claim;
+
     //Creats _timeAtthree bool.
    public bool pickedUp;
 
