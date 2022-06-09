@@ -38,7 +38,7 @@ public class EnemiesSpawner : MonoBehaviour
             zvalue = Random.Range(221, 37);
             xvalue = Random.Range(-50, 18);
             yvalue = Random.Range(3, 3);
-            Instantiate(Enemy, new Vector3(xvalue, yvalue, zvalue), _player.transform.rotation);
+            Instantiate(EnemySpawner, new Vector3(xvalue, yvalue, zvalue), _player.transform.rotation);
 
             EnemyKilled = false;
             
