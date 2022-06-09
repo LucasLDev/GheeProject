@@ -15,11 +15,9 @@ public class EnemyRespawn : MonoBehaviour
 
     //When enemy is destroyed spawn a new enemy
     //Added a timer that counts down after killing an enemy before spawning another
-     IEnumerator OnDestroy()
+     private void OnDestroy(GameObject Enemy)
     {
-
         _enemySpawn.EnemyKilled = true;
-        yield return new WaitForSeconds(3f);
         _enemySpawn.EnemySpawn();
         Destroy(gameObject);   
     }

@@ -26,27 +26,27 @@ public class GheeSpawn : MonoBehaviour
     //Float.
 
     //Creating _enemiesInScene int.
-    [SerializeField] int _GheeInScene;
+    //[SerializeField] int _GheeInScene;
 
     //Creating _numberofGhee int.
-    [SerializeField] int _numberofGheeHeld;
+    //[SerializeField] int _numberofGheeHeld;
 
     //Bools.
 
     public bool claim;
 
     //Creats _timeAtthree bool.
-   public bool pickedUp;
+    public bool pickedUp;
 
-//I made CanDeposite.
-    [SerializeField] bool CanDeposite;
+    //I made CanDeposite.
+    //[SerializeField] bool CanDeposite;
 
     //Creating _numberofSpawns int.
 
-    [SerializeField] int _numberofSpawns;
+    //[SerializeField] int _numberofSpawns;
 
     //I created deposited to test.
-    [SerializeField] bool deposited;
+    //[SerializeField] bool deposited;
 
     private void Start()
     {
