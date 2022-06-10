@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class Escape : MonoBehaviour
+public class Quit : MonoBehaviour
 {
     private void Update()
     {
