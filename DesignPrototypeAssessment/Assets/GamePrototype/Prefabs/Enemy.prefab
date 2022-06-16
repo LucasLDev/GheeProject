@@ -133,7 +133,7 @@ MonoBehaviour:
   enemyHealth: 10
   moveSpeed: 2
   walkPoint: {x: 0, y: 0, z: 0}
-  walkPointRange: 17.44
+  walkPointRange: 18
   timeBetweenAttacks: 0
   sightRange: 17.44
   attackRange: 3.58

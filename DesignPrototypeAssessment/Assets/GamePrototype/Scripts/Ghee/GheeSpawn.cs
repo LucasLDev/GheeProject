@@ -23,7 +23,13 @@ public class GheeSpawn : MonoBehaviour
     int zvalue;
     int yvalue;
 
+    //collider to prevent overlap
+    public Collider colliders;
+    Vector3 point;
+
     //Float.
+    public float radius;
+
 
     //Creating _enemiesInScene int.
     //[SerializeField] int _GheeInScene;
@@ -54,6 +60,11 @@ public class GheeSpawn : MonoBehaviour
         Spawn();
     }
 
+    void Update()
+    {
+        
+    }
+
 
     //I added a function called OnPressed that calls, on spacebar down to test.
     /*public void OnPressed()
@@ -67,7 +78,7 @@ public class GheeSpawn : MonoBehaviour
 
     //WaitTime IEnumerator used for a delay in spawning.
     //I changed "WaitTime" to "Spawn" & changed it to a void.
-
+    
     public void Spawn()
     {
         //If PickedUp is true.
@@ -78,7 +89,6 @@ public class GheeSpawn : MonoBehaviour
             xvalue = Random.Range(-50, 18);
             yvalue = Random.Range(6, 6);
             Instantiate(_ghee, new Vector3(xvalue, yvalue, zvalue), _player.transform.rotation);
-
             pickedUp = false;
             
         }

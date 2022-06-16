@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class Woodsman : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    [SerializeField] GameObject _wood;
+
+    [SerializeField] GameObject _agent;
+    
+    private const int V = 0;
+    int insideWood = 5;
+    int collectedWood = 0;
+
     void Start()
     {
-        
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
