@@ -5,21 +5,34 @@ using UnityEngine;
 
 public class EnemyRespawn : MonoBehaviour
 {
-    //float for total time on timer
+
+    private bool quitting = false;
+
     [SerializeField] EnemiesSpawner _enemySpawn;
+   
 
     private void Start()
     {
         _enemySpawn = FindObjectOfType<EnemiesSpawner>();
     }
 
+    private void OnApplicationQuit()
+    {
+        quitting = true;
+    }
+
+
     //When enemy is destroyed spawn a new enemy
     //Added a timer that counts down after killing an enemy before spawning another
-     private void OnDestroy(GameObject Enemy)
+    private void OnDestroy()
     {
-        _enemySpawn.EnemyKilled = true;
-        _enemySpawn.EnemySpawn();
-        Destroy(gameObject);   
+        if (!quitting)
+        {
+            _enemySpawn.EnemyKilled = true;
+            _enemySpawn.EnemySpawn();
+            Destroy(gameObject);
+        }
     }
+
 
 }
