@@ -85,8 +85,8 @@ public class GheeSpawn : MonoBehaviour
         if (pickedUp == true)
         {
             //I changed the values.
-            zvalue = Random.Range(221, 37);
-            xvalue = Random.Range(-50, 18);
+            zvalue = Random.Range(226, 32);
+            xvalue = Random.Range(-60, 73);
             yvalue = Random.Range(6, 6);
             Instantiate(_ghee, new Vector3(xvalue, yvalue, zvalue), _player.transform.rotation);
             pickedUp = false;
