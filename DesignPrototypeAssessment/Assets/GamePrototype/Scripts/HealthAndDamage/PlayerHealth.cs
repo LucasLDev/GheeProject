@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class PlayerHealth : MonoBehaviour
@@ -28,6 +29,8 @@ public class PlayerHealth : MonoBehaviour
         health -= Amount;
         if(health <= 0)
         {
+            healthSlider.value = health;
+            SceneManager.LoadScene("Death");
             Debug.Log("You Ded");
             Destroy(gameObject);
         }

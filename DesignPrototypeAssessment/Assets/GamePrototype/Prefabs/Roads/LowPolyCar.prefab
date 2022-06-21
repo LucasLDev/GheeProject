@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5492204372220157298}
   - component: {fileID: 559946875776893096}
   - component: {fileID: 1700222313183497071}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LowPolyCar
   m_TagString: Untagged
   m_Icon: {fileID: 0}

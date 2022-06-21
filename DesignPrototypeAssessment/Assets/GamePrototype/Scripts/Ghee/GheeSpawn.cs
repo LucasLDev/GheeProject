@@ -87,7 +87,7 @@ public class GheeSpawn : MonoBehaviour
             //I changed the values.
             zvalue = Random.Range(226, 32);
             xvalue = Random.Range(-60, 73);
-            yvalue = Random.Range(6, 6);
+            yvalue = Random.Range(2, 2);
             Instantiate(_ghee, new Vector3(xvalue, yvalue, zvalue), _player.transform.rotation);
             pickedUp = false;
             
