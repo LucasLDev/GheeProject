@@ -7,11 +7,22 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene((SceneManager.GetActiveScene().buildIndex + 1));
+        SceneManager.LoadScene("Gold");
     }
 
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void ToMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    private void Update()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 }

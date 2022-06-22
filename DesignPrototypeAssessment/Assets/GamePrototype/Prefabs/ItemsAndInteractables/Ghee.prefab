@@ -110,3 +110,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gheeSpawn: {fileID: 0}
   inventory: {fileID: 0}
+  radius: 2.05

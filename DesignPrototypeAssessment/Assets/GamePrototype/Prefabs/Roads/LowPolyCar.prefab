@@ -12,13 +12,13 @@ GameObject:
   - component: {fileID: 7772313070899521976}
   - component: {fileID: 5492204372220157298}
   - component: {fileID: 559946875776893096}
-  - component: {fileID: 1700222313183497071}
+  - component: {fileID: 6637963184610681807}
   m_Layer: 8
   m_Name: LowPolyCar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6661692582186739229
 Transform:
@@ -99,9 +99,9 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.8223144, y: 1.3985367, z: 1.0388192}
-  m_Center: {x: 0.000000072248056, y: 0.23937295, z: 7.2045234e-17}
---- !u!208 &1700222313183497071
+  m_Size: {x: 1.8223144, y: 0.93341887, z: 1.0388191}
+  m_Center: {x: 0.0000000745058, y: 0.006812513, z: -5.5885116e-17}
+--- !u!208 &6637963184610681807
 NavMeshObstacle:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -111,9 +111,9 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 1.135, y: 0.74, z: 0.71}
-  m_MoveThreshold: 0.99
+  m_Extents: {x: 0.9110001, y: 0.46, z: 0.51900005}
+  m_MoveThreshold: 0.1
   m_Carve: 0
   m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0.27, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5

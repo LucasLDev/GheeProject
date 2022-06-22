@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 6248832895637296336}
   - component: {fileID: 6248832895637296351}
   - component: {fileID: 6248832895637296350}
-  - component: {fileID: 6248832895637296349}
   - component: {fileID: 6248832895637296348}
   - component: {fileID: 6248832895637296347}
   - component: {fileID: -3590419918809625165}
   - component: {fileID: 2240551147699446624}
+  - component: {fileID: -4193869642378013987}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -97,7 +97,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 6248832895637296345}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.63
+  m_Radius: 1
   m_Speed: 8
   m_Acceleration: 8
   avoidancePriority: 50
@@ -110,35 +110,6 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 1
   m_ObstacleAvoidanceType: 4
---- !u!114 &6248832895637296349
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6248832895637296345}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72ff95693f3c3eb45a4ff5f95e4d7427, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  agent: {fileID: 6248832895637296350}
-  player: {fileID: 0}
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 64
-  whatIsPlayer:
-    serializedVersion: 2
-    m_Bits: 128
-  enemyHealth: 10
-  moveSpeed: 2
-  walkPoint: {x: 0, y: 0, z: 0}
-  walkPointRange: 18
-  timeBetweenAttacks: 0
-  sightRange: 17.44
-  attackRange: 3.58
-  playerInSightRange: 0
-  playerInAttackRange: 0
 --- !u!54 &6248832895637296348
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -194,6 +165,35 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-4193869642378013987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6248832895637296345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ff95693f3c3eb45a4ff5f95e4d7427, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 0}
+  player: {fileID: 0}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 64
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 128
+  enemyHealth: 100
+  moveSpeed: 3
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 18
+  timeBetweenAttacks: 2
+  sightRange: 20
+  attackRange: 3
+  playerInSightRange: 0
+  playerInAttackRange: 0
 --- !u!1 &6248832895792175773
 GameObject:
   m_ObjectHideFlags: 0
