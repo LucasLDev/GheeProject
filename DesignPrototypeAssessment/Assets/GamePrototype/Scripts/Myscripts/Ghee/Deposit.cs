@@ -7,27 +7,34 @@ using UnityEngine.SceneManagement;
 public class Deposit : MonoBehaviour
 {
     public Inventory inventory;
-    public int storedGhee;
-    public bool stored;
+
     public Slider slider;
+    public Slider depositSlider;
+
+
     [SerializeField] int number;
     public int goal = 50;
-
+    public int storedGhee;
+    
+    public bool stored;
+    
     public string messageToShow = "Default Message";
     public float messageDuration = 1;
 
+
     private void Update()
     {
+        depositSlider.value = storedGhee;
+
         if (storedGhee >= goal)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            SceneManager.LoadScene("MainMenu");
         }
+
     }
 
     private void OnTriggerEnter(Collider other)
     {
-
-
 
         if (other.tag == "Player")
         {
