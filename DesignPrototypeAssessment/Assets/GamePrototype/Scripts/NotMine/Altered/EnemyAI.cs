@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 //Script by Dave/GameDevlopment on YouTube
 
@@ -14,7 +15,10 @@ public class EnemyAI : MonoBehaviour
 
     public LayerMask whatIsGround, whatIsPlayer;
 
+    // I added enemy health variables
     public float enemyHealth;
+    public float maxHealth;
+    public Slider enemySlider;
 
     public float moveSpeed;
 
@@ -31,6 +35,12 @@ public class EnemyAI : MonoBehaviour
     //States of AI
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
+
+    void Start()
+    {
+        enemyHealth = maxHealth;
+        maxHealth = enemySlider.maxValue;
+    }
 
     private void Awake()
     {
@@ -50,10 +60,18 @@ public class EnemyAI : MonoBehaviour
         if (playerInSightRange && !playerInAttackRange) ChasePlayer();
         if (playerInAttackRange && !playerInSightRange) AttackPlayer();
 
+        enemySlider.value = enemyHealth;
         //I added if statement of when the enemy should die
         if (enemyHealth <= 0)
         {
+            enemySlider.value = enemyHealth;
             Destroy(this.gameObject);
+        }
+
+        //I added to make sure enemy health doesn't go above max health
+        if(enemyHealth > maxHealth)
+        {
+            enemyHealth = maxHealth;
         }
     }
 
