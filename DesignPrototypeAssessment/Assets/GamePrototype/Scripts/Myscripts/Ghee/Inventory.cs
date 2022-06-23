@@ -19,7 +19,7 @@ public class Inventory : MonoBehaviour
     void Start()
     {
         Bar.value = 0;
-        gheetext.text = "collected: " + amountOfGhee.ToString();
+        gheetext.text = "COLLECTED: " + amountOfGhee.ToString();
         pickUpScript = FindObjectOfType<PickupScript>();
         gheeSpawn = FindObjectOfType<GheeSpawn>();
         
@@ -31,7 +31,7 @@ public class Inventory : MonoBehaviour
         if (deposit.stored == true)
         {
             amountOfGhee = 0;
-            gheetext.text = "collected: " + amountOfGhee.ToString();
+            gheetext.text = "COLLECTED: " + amountOfGhee.ToString();
             deposit.stored = false;
         }
         //amountOfGhee += currentGheeOnPlayer;
@@ -39,7 +39,6 @@ public class Inventory : MonoBehaviour
         if (gheeSpawn.claim == true)
         {
             SetBar();
-            Debug.Log("anything");
         }
     }
     public void SetBar()
@@ -51,7 +50,7 @@ public class Inventory : MonoBehaviour
             //amountOfGhee = 5;
             Bar.maxValue = amountOfGhee;
             Bar.value = Bar.maxValue;
-            gheetext.text = "collected: " + amountOfGhee.ToString();
+            gheetext.text = "COLLECTED: " + amountOfGhee.ToString();
             StartCoroutine(depletion());
 
             gheeSpawn.claim = false;

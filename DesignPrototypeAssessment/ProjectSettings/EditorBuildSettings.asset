@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/GamePrototype/Scenes/Death.unity
     guid: bd133c23ffa0a3243bba8057aaf3d4ed
+  - enabled: 0
+    path: Assets/PseudoCodeTask/Scenes/PsuedoCodeTask.unity
+    guid: 15125974dd0970e418db431326beda82
   m_configObjects: {}
