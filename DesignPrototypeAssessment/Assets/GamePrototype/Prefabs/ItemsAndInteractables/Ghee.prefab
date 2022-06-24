@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8358312804177939650}
   m_Layer: 0
   m_Name: Ghee
-  m_TagString: Untagged
+  m_TagString: Ghee
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

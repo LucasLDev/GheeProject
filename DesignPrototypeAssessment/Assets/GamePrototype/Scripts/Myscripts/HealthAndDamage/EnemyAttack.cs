@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class EnemyAttack : MonoBehaviour
 {
-     private void OnCollisionEnter(Collision collision)
-     {
-         if (collision.gameObject.TryGetComponent<PlayerHealth>(out PlayerHealth PlayerComponent))
-         {
-             PlayerComponent.TakeDamage(25);
-         }
-     }
+    //On enemy collision with player
+    private void OnCollisionEnter(Collision collision)
+    {
+        //gets player health component and takes 25 damage
+        if (collision.gameObject.TryGetComponent<PlayerHealth>(out PlayerHealth PlayerComponent))
+        {
+            PlayerComponent.TakeDamage(25);
+        }
+    }
 }

@@ -8,7 +8,9 @@ public class Deposit : MonoBehaviour
 {
     public Inventory inventory;
 
+    //Ghee bar slider
     public Slider slider;
+    //Objective progress slider
     public Slider depositSlider;
 
 
@@ -24,8 +26,10 @@ public class Deposit : MonoBehaviour
 
     private void Update()
     {
+        //slider value always equals storedGhee value
         depositSlider.value = storedGhee;
 
+        //if stored ghee is equal to or greater than the goal load desired scene
         if (storedGhee >= goal)
         {
             SceneManager.LoadScene("MainMenu");
@@ -33,6 +37,7 @@ public class Deposit : MonoBehaviour
 
     }
 
+    //Display how to deposit (Keybind)
     private void OnTriggerEnter(Collider other)
     {
 
@@ -47,6 +52,8 @@ public class Deposit : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
+            //if player presses E and held ghee is greater than 1 then
+                // add held ghee to stored ghee and set ghee bar to 0
             if (Input.GetKey(KeyCode.E) && inventory.amountOfGhee > 1)
             {
                 number = storedGhee;

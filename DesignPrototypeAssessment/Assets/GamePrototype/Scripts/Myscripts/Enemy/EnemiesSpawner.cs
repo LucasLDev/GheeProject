@@ -6,10 +6,6 @@ using UnityEngine.InputSystem;
 public class EnemiesSpawner : MonoBehaviour
 {
 
-    //By Fynn Burgess.
-
-    //Gameobject.
-
     //Refrence to the enemy object.
     [SerializeField] GameObject EnemySpawner;
 
@@ -20,9 +16,10 @@ public class EnemiesSpawner : MonoBehaviour
     int zvalue;
     int yvalue;
 
-    //Bools.
+   //Bools.
    public bool EnemyKilled;
 
+    //On start spawn enemies
     private void Start()
     {
         EnemyKilled = true;
@@ -35,13 +32,15 @@ public class EnemiesSpawner : MonoBehaviour
         if (EnemyKilled == true)
         {
             //I changed the values.
+            //Picks values betweem a given range randomly
             zvalue = Random.Range(226, 26);
             xvalue = Random.Range(-60, 68);
             yvalue = Random.Range(2, 2);
 
-            
+            //spawn an enemy with the generated values
             Instantiate(EnemySpawner, new Vector3(xvalue, yvalue, zvalue), _player.transform.rotation);
 
+            //reset
             EnemyKilled = false;
             
         }

@@ -10,44 +10,14 @@ public class GheeSpawn : MonoBehaviour
 
     //Gameobject.
 
-    //Refrence to the enemy object.
-    //I changed "_enemy" to "_ghee" 
-    [SerializeField] GameObject _ghee;
-
-    [SerializeField] GameObject _player;
-
-    //Array.
-
-    //Creats there int varibles.
-    int xvalue;
-    int zvalue;
-    int yvalue;
-
-    //collider to prevent overlap
-    public Collider colliders;
-    Vector3 point;
-
-    //Float.
-    public float radius;
-
-
     //Creating _enemiesInScene int.
     //[SerializeField] int _GheeInScene;
 
     //Creating _numberofGhee int.
     //[SerializeField] int _numberofGheeHeld;
 
-    //Bools.
-
-    public bool objectInRadius;
-
-    public bool claim;
-
-    //Creates _timeAtthree bool.
-    public bool pickedUp;
-
     //I made CanDeposit.
-    //[SerializeField] bool CanDeposite;
+    //[SerializeField] bool CanDeposit;
 
     //Creating _numberofSpawns int.
 
@@ -56,15 +26,52 @@ public class GheeSpawn : MonoBehaviour
     //I created deposited to test.
     //[SerializeField] bool deposited;
 
+
+    //Refrence to the enemy object.
+    //I changed "_enemy" to "_ghee" 
+    [SerializeField] GameObject _ghee;
+
+    [SerializeField] GameObject _player;
+
+    //Array.
+
+    //Creates the int varibles.
+    int xvalue;
+    int zvalue;
+    int yvalue;
+
+    //collider to prevent overlap
+    public Collider colliders;
+    Vector3 point;
+
+    //Bools.
+    public bool claim;
+    public bool pickedUp;
+
+
     private void Start()
     {
         pickedUp = true;
         Spawn();
     }
 
-    void Update()
+    public void Spawn()
     {
-        
+        //If PickedUp is true.
+        if (pickedUp == true)
+        {
+            //Gets a set of random values for the x, y, z axis
+            //I changed the values.
+            zvalue = Random.Range(226, 26);
+            xvalue = Random.Range(-60, 68);
+            yvalue = Random.Range(2, 2);
+
+            //spawns gameobject on a new position using the generated values
+            Instantiate(_ghee, new Vector3(xvalue, yvalue, zvalue), _player.transform.rotation);
+
+            pickedUp = false;
+        }
+
     }
 
 
@@ -76,28 +83,10 @@ public class GheeSpawn : MonoBehaviour
         Spawn();
     }*/
 
-   //For spawning once one is pickedup.
+    //For spawning once one is pickedup.
 
     //WaitTime IEnumerator used for a delay in spawning.
     //I changed "WaitTime" to "Spawn" & changed it to a void.
-    
-    public void Spawn()
-    {
-        //If PickedUp is true.
-        if (pickedUp == true)
-        {
-            //I changed the values.
-            zvalue = Random.Range(226, 26);
-            xvalue = Random.Range(-60, 68);
-            yvalue = Random.Range(2, 2);
-
-            Instantiate(_ghee, new Vector3(xvalue, yvalue, zvalue), _player.transform.rotation); 
-        }
-
-    }
-
-
-
 
 
     //Private void spawn. Spawns enemies. 

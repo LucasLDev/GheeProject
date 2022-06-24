@@ -17,19 +17,18 @@ public class PickupScript : MonoBehaviour
         
     }
 
-
-
-
     private void OnTriggerEnter(Collider other)
     {
+        //player enters the ghee's trigger
         if (other.gameObject.tag == "Player")
         {
-
+            //player picks up ghee
             _gheeSpawn.pickedUp = true;
+            //new ghee is spawned
             _gheeSpawn.Spawn();
             _gheeSpawn.claim = true;
-            Destroy(gameObject);
-            //inventory.amountOfGhee =  
+            //picked up ghee object is destroyed
+            Destroy(gameObject); 
         }
 
     }
@@ -37,7 +36,6 @@ public class PickupScript : MonoBehaviour
     
     private void OnCollisionEnter(Collision collision)
     {
-
         _gheeSpawn.pickedUp = true;
         _gheeSpawn.Spawn();
     }

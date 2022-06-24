@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7735837761921855788}
   - component: {fileID: 7578240292151040950}
   - component: {fileID: 5182396523499112824}
+  - component: {fileID: -7299749662176241502}
   m_Layer: 0
   m_Name: Seat
   m_TagString: Untagged
@@ -112,3 +113,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.1030583, y: 2.45, z: 1.1030581}
   m_Center: {x: 0.00000012917072, y: 0.397, z: 0.00000025834143}
+--- !u!114 &-7299749662176241502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8096287979507028217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510b5102ff30f3749bb50ba1bf4a67a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

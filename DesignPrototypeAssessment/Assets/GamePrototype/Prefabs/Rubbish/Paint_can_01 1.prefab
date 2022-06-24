@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6119566451272741546}
   - component: {fileID: 7152502182943489295}
   - component: {fileID: 4946708994218363333}
+  - component: {fileID: 9167820883482676056}
   m_Layer: 0
   m_Name: Paint_can_01 1
   m_TagString: Untagged
@@ -81,3 +82,15 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &9167820883482676056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6892409512535402512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510b5102ff30f3749bb50ba1bf4a67a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
