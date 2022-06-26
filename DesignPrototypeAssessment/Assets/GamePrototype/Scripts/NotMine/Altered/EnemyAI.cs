@@ -156,12 +156,19 @@ public class EnemyAI : MonoBehaviour
     public void EnemyDamage(float damageAmount)
     {
         enemyHealth -= damageAmount;
-        if (enemyHealth <= 0)
+        if (enemyHealth <= 0f)
         {
-            Destroy(gameObject);
+            Die();
         }
     }
 
+    void Die()
+    {
+        Destroy(gameObject);
+    }
+
+
+    /*
     //I added this function to take 'Health' off when colliding with a bullet
     private void BulletCollision(Collision collision)
     {
@@ -170,4 +177,5 @@ public class EnemyAI : MonoBehaviour
             enemyHealth -= 1;
         }
     }
+    */
 }

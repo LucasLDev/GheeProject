@@ -1,10 +1,44 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Shoot : MonoBehaviour
 {
+    public float damage = 10f;
+    public float range = 100f;
+
+    public Camera fpsCam;
+    public ParticleSystem muzzle;
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            Fire();
+        }
+    }
+
+    void Fire()
+    {
+        //for when a make muzzle flash particle effect
+        //muzzle.Play()
+
+        RaycastHit hit;
+        if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
+        {
+            Debug.Log(hit.transform.name);
+
+            EnemyAI target = hit.transform.GetComponent<EnemyAI>();
+            if (target != null)
+            {
+                target.EnemyDamage(damage);
+            }
+        }
+    }
+
+
+
+    /*
     //variables
 
     //game objects
@@ -26,6 +60,7 @@ public class Shoot : MonoBehaviour
             GO.GetComponent<Rigidbody>().AddForce(GheeGun.transform.forward * bulletSpeed, ForceMode.Impulse);
         }
     }
+    */
 
 }
 
