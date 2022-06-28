@@ -10,6 +10,9 @@ public class Shoot : MonoBehaviour
     public Camera fpsCam;
     public ParticleSystem muzzle;
 
+    //reference to impact effect
+    //public GameObject impactEffect;
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
@@ -21,7 +24,7 @@ public class Shoot : MonoBehaviour
     void Fire()
     {
         //for when a make muzzle flash particle effect
-        //muzzle.Play()
+        muzzle.Play();
 
         RaycastHit hit;
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
@@ -33,6 +36,9 @@ public class Shoot : MonoBehaviour
             {
                 target.EnemyDamage(damage);
             }
+
+            //for an impact effect
+            //Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
         }
     }
 
