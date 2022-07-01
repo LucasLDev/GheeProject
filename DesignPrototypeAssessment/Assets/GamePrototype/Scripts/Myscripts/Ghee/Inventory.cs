@@ -13,6 +13,7 @@ public class Inventory : MonoBehaviour
     [SerializeField] GheeSpawn gheeSpawn;
     [SerializeField] Deposit deposit;
     [SerializeField] TextMeshProUGUI gheetext;
+    [SerializeField] Shoot shoot;
     
 
 
@@ -28,11 +29,13 @@ public class Inventory : MonoBehaviour
 
     void Update()
     {
+        Bar.value = amountOfGhee;
+        gheetext.text = "COLLECTED: " + amountOfGhee.ToString();
+
         //if the ghee is stored set players ghee to 0 and update ghee bar text
         if (deposit.stored == true)
         {
             amountOfGhee = 0;
-            gheetext.text = "COLLECTED: " + amountOfGhee.ToString();
             deposit.stored = false;
         }
         //amountOfGhee += currentGheeOnPlayer;
@@ -56,9 +59,6 @@ public class Inventory : MonoBehaviour
             Bar.maxValue = amountOfGhee;
             Bar.value = Bar.maxValue;
 
-            //display amount of ghee
-            gheetext.text = "COLLECTED: " + amountOfGhee.ToString();
-
             //Start depletion of ghee
             StartCoroutine(depletion());
 
@@ -79,7 +79,6 @@ public class Inventory : MonoBehaviour
         {
             amountOfGhee--;
             Bar.value = amountOfGhee;
-            gheetext.text = "COLLECTED: " + amountOfGhee.ToString();
             StartCoroutine(depletion());
         }
         
