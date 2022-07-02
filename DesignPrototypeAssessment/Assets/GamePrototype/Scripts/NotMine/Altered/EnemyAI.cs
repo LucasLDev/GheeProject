@@ -156,6 +156,9 @@ public class EnemyAI : MonoBehaviour
     public void EnemyDamage(float damageAmount)
     {
         enemyHealth -= damageAmount;
+
+        //play damage animation
+
         if (enemyHealth <= 0f)
         {
             Die();
@@ -164,6 +167,8 @@ public class EnemyAI : MonoBehaviour
 
     void Die()
     {
+        //death animation
+
         Destroy(gameObject);
     }
 
