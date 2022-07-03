@@ -15,6 +15,8 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] Slider healthSlider;
     [SerializeField] TextMeshProUGUI Hp;
 
+    public GameObject Enemy;
+
     //On game start health is set to max health
     //sliders max value equal players max health
     private void Start()
@@ -41,10 +43,21 @@ public class PlayerHealth : MonoBehaviour
         {
             //update slider
             healthSlider.value = health;
+
+            DestroyEnemies();
+            
             //load wanted scene
             SceneManager.LoadScene("Death");
+            
+            
         }
     }
 
+    void DestroyEnemies()
+    {
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach(GameObject enemy in enemies)
+        GameObject.Destroy(enemy);
+    }
 
 }
