@@ -11,16 +11,30 @@ public class GheeRespawn : MonoBehaviour
         //find gheeSpawn object
         _ghee = FindObjectOfType<GheeSpawn>();
     }
-    private void OnColliderStay(Collision other)
+    private void OnCollisionStay(Collision other)
     {
-        // if the tag of the object inside this object is "Ghee" 
-        if (other.gameObject.tag == "Ghee")
+
+        if (gameObject.tag == "Ghee")
         {
             Debug.Log("Respawn");
             //spawn ghee
             _ghee.Spawn();
             //destroy ghee
-            Destroy(other.gameObject);
+            Destroy(this.gameObject);
+        }
+
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+
+        if (gameObject.tag == "Ghee")
+        {
+            Debug.Log("Respawn");
+            //spawn ghee
+            _ghee.Spawn();
+            //destroy ghee
+            Destroy(this.gameObject);
         }
 
     }
