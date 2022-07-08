@@ -7,7 +7,7 @@ public class GheeSound : MonoBehaviour
     private AudioSource audSrc;
     public AudioClip[] audioClipArray;
 
-    public GheeSpawn _ghee;
+     GheeSpawn _ghee;
 
     void Start()
     {
@@ -17,7 +17,7 @@ public class GheeSound : MonoBehaviour
 
     private void Update()
     {
-        if (_ghee.claim == true)
+        if (_ghee.pickedUp == true)
         {
             PlayRandomlySelectedSound();
         }
