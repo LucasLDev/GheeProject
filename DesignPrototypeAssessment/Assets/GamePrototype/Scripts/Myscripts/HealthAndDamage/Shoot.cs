@@ -7,6 +7,9 @@ public class Shoot : MonoBehaviour
     public float damage = 10f;
     public float range = 100f;
 
+    private AudioSource audSrc;
+    public AudioClip[] audioArray;
+
     public Camera fpsCam;
     public ParticleSystem muzzle, muzzleAlt;
 
@@ -14,6 +17,11 @@ public class Shoot : MonoBehaviour
 
     //reference to impact effect
     //public GameObject impactEffect;
+
+     void Start()
+    {
+        audSrc = GetComponent<AudioSource>();
+    }
 
     void Update()
     {
@@ -43,6 +51,7 @@ public class Shoot : MonoBehaviour
             //for when a make muzzle flash particle effect
             muzzle.Play();
             muzzleAlt.Play();
+            RandomSound();
 
             RaycastHit hit;
             if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
@@ -59,6 +68,11 @@ public class Shoot : MonoBehaviour
                 //Instantiate(impactEffect, hit.point, Quaternion.LookRotation(hit.normal));
             }
         }
+    }
+
+    void RandomSound()
+    {
+        audSrc.PlayOneShot(audioArray[Random.Range(0, audioArray.Length)]);
     }
 
 
