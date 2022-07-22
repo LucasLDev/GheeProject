@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class WeaponSwap : MonoBehaviour
 {
+    private AudioSource audsrc;
+    public AudioClip[] swapArray;
     public int equippedWeapon = 0;
 
     void Start()
     {
         SelectWeapon();
+        audsrc = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -18,8 +21,11 @@ public class WeaponSwap : MonoBehaviour
         //switching to next/previous weapon via scroll wheel
         if (Input.GetAxis("Mouse ScrollWheel") > 0f)
         {
+            PlayWeaponSwap();
+            //StartCoroutine (WaitSeconds());
             if (equippedWeapon >= transform.childCount - 1)
             {
+                
                 equippedWeapon = 0;
             }
             else {
@@ -29,8 +35,13 @@ public class WeaponSwap : MonoBehaviour
 
         if (Input.GetAxis("Mouse ScrollWheel") < 0f)
         {
+            
+            PlayWeaponSwap();
+            //StartCoroutine (WaitSeconds());
+
             if (equippedWeapon <= 0)
             {
+                
                 equippedWeapon = transform.childCount - 1;
             }
             else {
@@ -72,5 +83,16 @@ public class WeaponSwap : MonoBehaviour
 
             i++;
         }
+    }
+
+    void PlayWeaponSwap()
+    {
+        
+        audsrc.PlayOneShot(swapArray[Random.Range(0, swapArray.Length -1)]);
+    }
+
+        IEnumerator WaitSeconds()
+    {
+        yield return new WaitForSeconds(1);
     }
 }
